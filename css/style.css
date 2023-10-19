@@ -53,6 +53,24 @@ body ul {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.line-menu {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #404bbf;
+}
+.line-menu::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--OCEAN, #404bbf);
+  left: 0;
+  bottom: -1px;
 }
 
 .header-container {
@@ -94,13 +112,14 @@ body ul {
 }
 
 .header-menu-link {
-  font-weight: 400;
-  padding: 24px 0;
-
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #2e2f42;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .header-menu-link:active {
@@ -191,18 +210,13 @@ body ul {
 }
 
 .hero-button {
-  font-family: inherit;
-  background-color: #4d5ae5;
-  color: #fff;
-  border-color: #4d5ae5;
-  font-size: 16px;
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.5;
-  cursor: pointer;
   letter-spacing: 0.04em;
-  border: none;
+  color: #ffffff;
+  background-color: #4d5ae5;
   cursor: pointer;
-  margin-left: 635px;
   top: 20px;
   left: 20px;
   padding: 16px, 32px, 16px, 32px;
@@ -212,6 +226,8 @@ body ul {
   margin: 0 auto;
   min-width: 169px;
   height: 56px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 4px 4px 0px #00000026;
 }
 
 .hero-button:hover,
@@ -409,6 +425,33 @@ body ul {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+.sellers-cover-container {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-item:hover .sellers-cover-text {
+  transform: translateY(0%);
+}
+
+.sellers-cover-text {
+  text-align: left;
+  color: #f4f4fd;
+  height: 100%;
+  top: 0;
+  padding: 40px 32px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d5ae5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-subtext {
