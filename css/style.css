@@ -176,6 +176,7 @@ body ul {
   background-color: #2e2f42;
   padding: 188px 0;
   max-width: 1440px;
+  margin: 0 auto;
   background-size: cover;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -399,6 +400,12 @@ body ul {
 .portfolio {
   padding-top: 120px;
   padding-bottom: 120px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
 }
 
 .portfolio-item {
